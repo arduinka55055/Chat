@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ЧАТИК</title>
+    <link href="../static/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+  </head>
+  <body class="text-center">
+        <div class="chat_window">
+            <h2>Чатик</h2>
+            <h2>Комната: {{session['room']}}</h2><br>
+            <textarea id="chat" cols="70" rows="10" placeholder="Нет ещё не одного сообщение....Написать первое"></textarea><br><br>
+            <input type="text" id="text" size="60" placeholder="Напишите своё сообщение здесь">
+            <button type="button" id="send" class="btn btn-primary">Отправить</button><br><br>
+            <center> <button type="button" class="btn btn-danger" onclick="leave_room();">Покинуть чат</button></center>
+         
+        </div>
+  </body>
+
+        

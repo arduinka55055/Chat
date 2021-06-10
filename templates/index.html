@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+</html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ЧАТИК</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+</head>
+
+<body class="text-center">
+
+    <form class="form-enter" action="{{url_for('chat_between_users')}}" method="POST">
+        <h1 class="mb-3 font-weight-normal">ЧАТИК</h1>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Ник юзера" required autofocus><br>
+        <input type="text" id="room" name="room" class="form-control" placeholder="Имя комнати" required><br>
+        <button class="btn btn-lg btn-success btn-block" value="submit">Начать чатиться</button>
+
+    </form>
+
+</body>
+
+</html>
